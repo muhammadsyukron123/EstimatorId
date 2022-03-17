@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="EstimatorId">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/EstimatorId.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,33 @@
+.bodybg{
+ -fx-background-image: url("bg.jpeg");
+ -fx-background-size: 100% 100%;
+}
+
+.ribboncolor{
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+}
+
+.ribbontitlecolor{
+    -fx-background-color: #61B307;
+}
+
+.ribbonfiltercolor{
+    -fx-background-color: #089613;
+}
+
+.backgroundcolor{
+    -fx-background-color: white;
+}
+
+.sidebutton{
+    -fx-background-color: white;
+}
+
+.sidebutton.hover{
+    -fx-background-color: greenyellow;
+}
+
+.imgviewprop{
+    -fx-background-radius: 30;
+}
