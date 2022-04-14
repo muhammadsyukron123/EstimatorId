@@ -31,3 +31,58 @@
 .imgviewprop{
     -fx-background-radius: 30;
 }
+
+#mniOpen > .label{
+    -fx-graphic: url("assets/icon-edit.png");
+    
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: gray;
+    -fx-border-radius: 5px 5px 5px 5px;
+    -fx-font-family: "Quicksand";
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-prompt-text: "Tidak Ada Dokumen";
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color:  #ECFBEB;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-animated: true;
+    -fx-background-radius: 5px 5px 0px 0px;
+    
+/*    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 0px 0;*/
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.list-view {
+    -fx-selection-bar:green ;
+    -fx-selection-bar-non-focused: green ;
+}
+
+/*.combo-box{
+    -fx-border-color: white white transparent white;
+    
+}
+.combo-box .arrow{
+    -fx-background-color: #089613;
+}
+.combo-box .arrow-button{
+    -fx-background-color:white;
+    -fx-border-style:none;
+}
+.combo-box .arrow-button{
+    -fx-background-color:white;
+}
+.combo-box .list-cell{
+    -fx-background-color:white;
+}*/

@@ -12,7 +12,7 @@
          <children>
             <Text layoutX="222.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estimator.id" wrappingWidth="461.0">
                <font>
-                  <Font name="System Bold" size="69.0" />
+                  <Font name="Quicksand Bold" size="69.0" />
                </font>
             </Text>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="97.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">

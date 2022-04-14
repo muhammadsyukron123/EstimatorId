@@ -5,12 +5,13 @@
  */
 package estimatorid;
 
-import Helper.DBConnection;
+import Database.DatabaseConnection;
 import com.mysql.jdbc.Connection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -22,12 +23,14 @@ public class EstimatorId extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/View/Dashboard.fxml"));
-        DBConnection.DBConnection();
+        
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
         stage.show();
         stage.setMaximized(true);
+        stage.setTitle("estimator.id");
+        stage.getIcons().add(new Image("/assets/logoonly.jpeg"));
 //        stage.sizeToScene();
     }
 

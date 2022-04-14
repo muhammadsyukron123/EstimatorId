@@ -1,39 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="backgroundcolor" stylesheets="@../estimatorid/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Controller.TambahProyekController">
+<AnchorPane id="AnchorPane" fx:id="apTambahProyek" prefHeight="720.0" prefWidth="1280.0" styleClass="backgroundcolor" stylesheets="@../estimatorid/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TambahProyekController">
    <children>
-      <HBox layoutX="91.0" layoutY="10.0" prefHeight="53.0" prefWidth="1280.0" styleClass="ribboncolor" stylesheets="@../estimatorid/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" layoutX="45.0" layoutY="156.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="340.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="156.0">
          <children>
-            <ImageView fitHeight="39.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ivFotoProyek" fitHeight="320.0" fitWidth="320.0" onMouseClicked="#addFotoProyek" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/logo.png" />
+                  <Image url="@../assets/emptyimage.jpeg" />
                </image>
-               <HBox.margin>
-                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
          </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="18.0" layoutY="65.0" prefHeight="102.0" prefWidth="1280.0" styleClass="ribbontitlecolor" stylesheets="@../estimatorid/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <effect>
+            <DropShadow color="#00000036" />
+         </effect>
+      </VBox>
+      <JFXButton fx:id="btCropFoto" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="170.0" layoutY="435.0" onAction="#cropFoto" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #089613; -fx-background-radius: 30;" text=" " textFill="WHITE" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="435.0">
+         <font>
+            <Font name="Quicksand Bold" size="1.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icon-crop.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btHapusFoto" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="220.0" layoutY="435.0" onAction="#hapusFoto" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: DA3D35; -fx-background-radius: 30px;" text=" " textFill="WHITE" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="435.0">
+         <font>
+            <Font name="Quicksand Bold" size="1.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icon-delete-white.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="tfNamaProyek" focusColor="#67d80c" labelFloat="true" layoutX="450.0" layoutY="190.0" prefHeight="28.0" prefWidth="709.0" promptText="Nama Proyek (wajib diisi)" unFocusColor="#4d4d4d80" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font name="Quicksand Regular" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tfLokasiProyek" focusColor="#67d80c" labelFloat="true" layoutX="450.0" layoutY="258.0" prefHeight="25.0" prefWidth="790.0" promptText="Lokasi Proyek (wajib diisi)" unFocusColor="#4d4d4d80" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font name="Quicksand Regular" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tfPemilikProyek" focusColor="#67d80c" labelFloat="true" layoutX="450.0" layoutY="310.0" promptText="Pemilik Proyek (wajib diisi)" unFocusColor="#4d4d4d80" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font name="Quicksand Regular" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tfJasaKontraktor" focusColor="#67d80c" labelFloat="true" layoutX="450.0" layoutY="370.0" onAction="#inputValidatorJasaKontraktor" promptText="Jasa Kontraktor (wajib diisi)" unFocusColor="#4d4d4d80" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="370.0">
+         <font>
+            <Font name="Quicksand Regular" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tfPajak" focusColor="#67d80c" labelFloat="true" layoutX="450.0" layoutY="430.0" onAction="#inputValidatorPajak" promptText="Pajak (wajib diisi)" unFocusColor="#4d4d4d80" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="430.0">
+         <font>
+            <Font name="Quicksand Regular" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="taKeterangan" focusColor="#67d80c" labelFloat="true" layoutX="450.0" layoutY="490.0" prefHeight="81.0" prefWidth="740.0" promptText="Keterangan" unFocusColor="#4d4d4d80" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="490.0">
+         <font>
+            <Font name="Quicksand Regular" size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXButton fx:id="btTambahDokumen" buttonType="RAISED" layoutX="139.0" layoutY="510.0" onAction="#addDocument" prefHeight="30.0" prefWidth="173.0" style="-fx-background-color: #089613; -fx-background-radius: 30px;" text="Tambah Dokumen" textFill="WHITE" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="510.0">
+         <font>
+            <Font name="Quicksand Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/plus_circle.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <HBox alignment="CENTER" layoutX="450.0" layoutY="610.0" prefHeight="68.0" prefWidth="790.0" spacing="20.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="610.0">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Proyek Anda" HBox.hgrow="NEVER">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
+            <JFXButton fx:id="btSimpan" buttonType="RAISED" onAction="#simpanProyek" onMouseClicked="#simpanDanLanjutkan" prefHeight="50.0" prefWidth="253.0" style="-fx-background-radius: 30px;" styleClass="ribbonfiltercolor" text="Simpan dan Lanjutkan" textFill="WHITE" HBox.hgrow="NEVER">
                <font>
-                  <Font name="System Bold" size="40.0" />
+                  <Font name="Quicksand Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fff2f2" glyphName="CHECK" size="24" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btBatal" buttonType="RAISED" onAction="#backToDaftarProyek" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFA700; -fx-background-radius: 30px;" text="Batal" textFill="WHITE" HBox.hgrow="NEVER">
+               <font>
+                  <Font name="Quicksand Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="24" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </HBox>
+      <AnchorPane prefHeight="60.0" prefWidth="1280.0" style="-fx-background-radius: 5px;" styleClass="ribbontitlecolor" stylesheets="@../estimatorid/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow color="#00000080" />
+         </effect>
+         <children>
+            <Text fill="WHITE" layoutX="975.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proyek Baru" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="Quicksand Bold" size="40.0" />
                </font>
             </Text>
          </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="959.0" layoutY="79.0" prefHeight="60.0" prefWidth="363.0" style="-fx-background-color: #089613; -fx-background-radius: 0px 30px 30px 0px;" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Label text="Lengkapi Profil Proyek" textFill="WHITE">
+               <font>
+                  <Font name="Quicksand Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0000002f" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" spread="0.4" width="10.0" />
+               </effect>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#00000078" />
+         </effect>
       </HBox>
+      <JFXListView fx:id="listDokumen" editable="true" layoutX="38.0" layoutY="571.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="350.0" showTooltip="true" style="-fx-background-radius: 5px; -fx-font-family: Quicksand; -fx-font-size: 14px;" stylesheets="@../estimatorid/style.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="567.0" />
+      <Label layoutX="41.0" layoutY="545.0" text="Daftar Dokumen">
+         <font>
+            <Font name="Quicksand Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

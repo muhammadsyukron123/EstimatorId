@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorId/src/View/FXMLDocument.fxml</file>
-            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorId/src/Controller/TambahProyekController.java</file>
-            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorId/src/Model/DaftarProyekModel.java</file>
-            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorId/src/Helper/DBConnection.java</file>
-            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorId/src/View/TambahProyek.fxml</file>
-            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorId/src/Controller/FXMLDocumentController.java</file>
-            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorId/src/estimatorid/style.css</file>
-            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorId/src/estimatorid/EstimatorId.java</file>
+            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorIdApps/src/Controller/TambahProyekController.java</file>
+            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorIdApps/src/Database/DatabaseHelper.java</file>
+            <file>file:/C:/Users/muham/OneDrive/Documents/NetBeansProjects/EstimatorIdApps/src/Controller/DaftarProyekController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -75,6 +75,7 @@ public class DashboardController implements Initializable {
         AnchorPane.setRightAnchor(node, 0.0);
         AnchorPane.setLeftAnchor(node, 0.0);
         AnchorPane.setBottomAnchor(node, 0.0);
+        
         blankpage.getChildren().setAll(node);
         
         

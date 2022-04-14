@@ -12,33 +12,50 @@
 
 <AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="backgroundcolor" stylesheets="@../estimatorid/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashboardController">
    <children>
-      <AnchorPane fx:id="sidebar" layoutY="59.0" prefHeight="661.0" prefWidth="251.0" styleClass="backgroundcolor" stylesheets="@../estimatorid/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="59.0">
+      <AnchorPane maxHeight="60.0" prefHeight="60.0" prefWidth="1280.0" styleClass="backgroundcolor" stylesheets="@../estimatorid/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow color="#00000045" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="sidebar" layoutX="-4.0" prefHeight="720.0" prefWidth="251.0" style="-fx-border-radius: 30; -fx-background-color: linear-gradient(to bottom, #089613, #3FBF49); -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-4.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox layoutX="7.0" prefHeight="390.0" prefWidth="251.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <HBox alignment="CENTER" layoutY="39.0" prefHeight="68.0" prefWidth="162.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0">
                <children>
-                  <JFXButton fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#navigateToHomePage" prefHeight="60.0" prefWidth="272.0" text="Home">
+                  <ImageView fitHeight="61.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/white-logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <VBox layoutY="165.0" prefHeight="274.0" prefWidth="251.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="165.0">
+               <children>
+                  <JFXButton fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#navigateToHomePage" prefHeight="60.0" prefWidth="251.0" ripplerFill="#67d751" text="Home" textFill="WHITE">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                      <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font name="Quicksand Bold" size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/homeicon.png" />
+                              <Image url="@../assets/icon-home-white.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="btnDaftarProyek" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#navigateToDaftarProject" prefHeight="60.0" prefWidth="310.0" text="Daftar Proyek">
+                  <JFXButton fx:id="btnDaftarProyek" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#navigateToDaftarProject" prefHeight="60.0" prefWidth="310.0" ripplerFill="#67d751" text="Daftar Proyek" textFill="WHITE">
                      <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font name="Quicksand Bold" size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/listicons.png" />
+                              <Image url="@../assets/icon-collection-white.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -46,14 +63,14 @@
                         <Insets />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="btnLogout" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#navigateToLogout" prefHeight="60.0" prefWidth="251.0" text="Logout">
+                  <JFXButton fx:id="btnLogout" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#navigateToLogout" prefHeight="60.0" prefWidth="251.0" ripplerFill="#67d751" text="Logout" textFill="WHITE">
                      <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font name="Quicksand Bold" size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/logouticon.png" />
+                              <Image url="@../assets/icon-logout-white.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -65,25 +82,13 @@
             <DropShadow color="#00000062" height="0.0" radius="5.4325" width="23.73" />
          </effect>
       </AnchorPane>
-      <AnchorPane maxHeight="58.0" prefHeight="58.0" prefWidth="1280.0" styleClass="backgroundcolor" stylesheets="@../estimatorid/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <effect>
-            <DropShadow color="#00000045" />
-         </effect>
+      <AnchorPane fx:id="blankpage" layoutX="255.0" layoutY="67.0" prefHeight="647.0" prefWidth="1019.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-radius: 30;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="67.0">
          <children>
-            <HBox layoutX="8.0" prefHeight="58.0" prefWidth="162.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="40.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/logo.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </HBox.margin>
-                  </ImageView>
-               </children>
-            </HBox>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="blankpage" layoutX="261.0" layoutY="67.0" prefHeight="647.0" prefWidth="1013.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="261.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="67.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="447.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/preloader.gif" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </AnchorPane>
